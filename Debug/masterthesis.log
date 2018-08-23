@@ -1,0 +1,43 @@
+﻿  Forest.cpp
+c:\eigen\eigen\src\core\assignevaluator.h(834): error C2338: YOU_MIXED_DIFFERENT_NUMERIC_TYPES__YOU_NEED_TO_USE_THE_CAST_METHOD_OF_MATRIXBASE_TO_CAST_NUMERIC_TYPES_EXPLICITLY
+  c:\eigen\eigen\src\core\plainobjectbase.h(728): note: see reference to function template instantiation 'void Eigen::internal::call_assignment_no_alias<Derived,Eigen::Matrix<float,-1,-1,0,-1,-1>,Eigen::internal::assign_op<int,float>>(Dst &,const Src &,const Func &)' being compiled
+          with
+          [
+              Derived=Eigen::Matrix<int,-1,1,0,-1,1>,
+              Dst=Eigen::Matrix<int,-1,1,0,-1,1>,
+              Src=Eigen::Matrix<float,-1,-1,0,-1,-1>,
+              Func=Eigen::internal::assign_op<int,float>
+          ]
+  c:\eigen\eigen\src\core\plainobjectbase.h(537): note: see reference to function template instantiation 'Derived &Eigen::PlainObjectBase<Derived>::_set_noalias<Eigen::Matrix<float,-1,-1,0,-1,-1>>(const Eigen::DenseBase<Eigen::Matrix<float,-1,-1,0,-1,-1>> &)' being compiled
+          with
+          [
+              Derived=Eigen::Matrix<int,-1,1,0,-1,1>
+          ]
+  c:\eigen\eigen\src\core\plainobjectbase.h(537): note: see reference to function template instantiation 'Derived &Eigen::PlainObjectBase<Derived>::_set_noalias<Eigen::Matrix<float,-1,-1,0,-1,-1>>(const Eigen::DenseBase<Eigen::Matrix<float,-1,-1,0,-1,-1>> &)' being compiled
+          with
+          [
+              Derived=Eigen::Matrix<int,-1,1,0,-1,1>
+          ]
+  c:\eigen\eigen\src\core\matrix.h(380): note: see reference to function template instantiation 'Eigen::PlainObjectBase<Eigen::Matrix<int,-1,1,0,-1,1>>::PlainObjectBase<Derived>(const Eigen::DenseBase<Derived> &)' being compiled
+          with
+          [
+              Derived=Eigen::Matrix<float,-1,-1,0,-1,-1>
+          ]
+  c:\eigen\eigen\src\core\matrix.h(379): note: see reference to function template instantiation 'Eigen::PlainObjectBase<Eigen::Matrix<int,-1,1,0,-1,1>>::PlainObjectBase<Derived>(const Eigen::DenseBase<Derived> &)' being compiled
+          with
+          [
+              Derived=Eigen::Matrix<float,-1,-1,0,-1,-1>
+          ]
+  c:\users\maosheng\source\repos\masterthesis\masterthesis\forest.cpp(63): note: see reference to function template instantiation 'Eigen::Matrix<int,-1,1,0,-1,1>::Matrix<Derived>(const Eigen::EigenBase<Derived> &)' being compiled
+          with
+          [
+              Derived=Eigen::Matrix<float,-1,-1,0,-1,-1>
+          ]
+  c:\users\maosheng\source\repos\masterthesis\masterthesis\forest.cpp(63): note: see reference to function template instantiation 'Eigen::Matrix<int,-1,1,0,-1,1>::Matrix<Derived>(const Eigen::EigenBase<Derived> &)' being compiled
+          with
+          [
+              Derived=Eigen::Matrix<float,-1,-1,0,-1,-1>
+          ]
+  main.cpp
+c:\users\maosheng\source\repos\masterthesis\masterthesis\main.cpp(39): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Generating Code...
