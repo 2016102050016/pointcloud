@@ -66,7 +66,7 @@ int main(int argc, char** argv)
 	std::cout << "\nGini at this node is: " << node->getNodeGini() << std::endl;*/
 	node->splitNodeByGini(nodes, 0, 10);
 
-	RandomForest rf(trnData, 10, 10, 10, 0);
+	RandomForest rf(10, 10, 10, 0);
 	rf.train(trnData, trnLabels, trnIndices, trnDists, 8, 10);
 	
 	system("pause");

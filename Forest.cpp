@@ -1,31 +1,31 @@
 #include"Forest.h"
 
-RandomForest::RandomForest(Eigen::MatrixXf &trainset, int numTrees, int maxDepth, int minSamplesPerLeaf, float giniThresh):
+RandomForest::RandomForest(int numTrees, int maxDepth, int minSamplesPerLeaf, float giniThresh):
 	_numTrees(numTrees),
 	_maxDepth(maxDepth),
 	_minSamplesPerLeaf(minSamplesPerLeaf),
 	_giniThresh(giniThresh),
-	_trainSample(trainset),
+	_trainSample(nullptr),
 	_forest(_numTrees, nullptr)
 {}
 
 RandomForest::~RandomForest()
 {
-	//if (_trainSample != nullptr)
-	//{
-	//	delete _trainSample;
-	//	_trainSample = nullptr;
-	//}
+	if (_trainSample != nullptr)
+	{
+		delete _trainSample;
+		_trainSample = nullptr;
+	}
 }
 
 void RandomForest::train(Eigen::MatrixXf &trainset, Eigen::VectorXi &labels, Eigen::MatrixXi &indices,
 					Eigen::MatrixXf &dists, int numClasses, int numFeatsPerNode)
 {
-	int _numSamples = _trainSample.rows();
+	int _numSamples = trainset.rows();
 	_numClasses = numClasses;
 	_numFeatsPerNode = numFeatsPerNode;
-
-	/* initializing the trees
+	
+	// initializing the trees
 	for (int i = 0; i < _numTrees; ++i)
 	{
 		_forest[i] = new Tree(_maxDepth, _numFeatsPerNode, _minSamplesPerLeaf, _giniThresh);
@@ -48,7 +48,6 @@ void RandomForest::train(Eigen::MatrixXf &trainset, Eigen::VectorXi &labels, Eig
 		_forest[i]->train(sample);
 		delete sample;
 	}
-	*/
 }
 
 void RandomForest::predict(Eigen::MatrixXf &dataset, int &res)
