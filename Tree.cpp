@@ -1,13 +1,14 @@
 #include "Tree.h"
 
-Tree::Tree(int maxDepth, int numFeatPerNode, int minNumSamplesPerLeaf, float giniThresh):
+Tree::Tree(int maxDepth, int numFeatPerNode, int minNumSamplesPerLeaf, float giniThresh) :
 	_maxDepth(maxDepth),
 	_numFeatPerNode(numFeatPerNode),
 	_minNumSamplesPerLeaf(minNumSamplesPerLeaf),
 	_giniThresh(giniThresh),
-	_numNodes(static_cast<int>(std::pow(2, _maxDepth)-1)),
+	_numNodes(static_cast<int>(std::pow(2, _maxDepth) - 1)),
 	_treeNodes(_numNodes, nullptr)
-{}
+{
+}
 
 Result Tree::predict(Eigen::VectorXi datapoint)
 {
@@ -27,11 +28,11 @@ void Tree::train(Sample *sample)
 {
 	// for all the possible features, only numFeats features at each node
 	// is calculated
-	int numFeats = sample->getNumFeatures();
-	Eigen::VectorXi samplesId = sample->getSelectedSamplesId();
-	Sample *nodeSample = new Sample(sample, samplesId);
+	//int numFeats = sample->getNumFeatures();
+	Eigen::VectorXi selectedSamplesId = sample->getSelectedSamplesId();
+	Sample *nodeSample = new Sample(sample, selectedSamplesId);
 	_treeNodes[0] = new Node();
-	_treeNodes[0]->_samples = nodeSample;
+	_treeNodes[0]->_samples = sample;
 	// calculate the probability and gini
 	_treeNodes[0]->computeNodeGini();
 	for (int i = 0; i < _numNodes; ++i)

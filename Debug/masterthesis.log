@@ -1,4 +1,6 @@
 ﻿  Forest.cpp
+c:\users\maosheng\source\repos\masterthesis\masterthesis\forest.cpp(38): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\maosheng\source\repos\masterthesis\masterthesis\forest.cpp(46): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\eigen\eigen\src\core\assignevaluator.h(834): error C2338: YOU_MIXED_DIFFERENT_NUMERIC_TYPES__YOU_NEED_TO_USE_THE_CAST_METHOD_OF_MATRIXBASE_TO_CAST_NUMERIC_TYPES_EXPLICITLY
   c:\eigen\eigen\src\core\plainobjectbase.h(728): note: see reference to function template instantiation 'void Eigen::internal::call_assignment_no_alias<Derived,Eigen::Matrix<float,-1,-1,0,-1,-1>,Eigen::internal::assign_op<int,float>>(Dst &,const Src &,const Func &)' being compiled
           with
@@ -28,16 +30,29 @@ c:\eigen\eigen\src\core\assignevaluator.h(834): error C2338: YOU_MIXED_DIFFERENT
           [
               Derived=Eigen::Matrix<float,-1,-1,0,-1,-1>
           ]
-  c:\users\maosheng\source\repos\masterthesis\masterthesis\forest.cpp(63): note: see reference to function template instantiation 'Eigen::Matrix<int,-1,1,0,-1,1>::Matrix<Derived>(const Eigen::EigenBase<Derived> &)' being compiled
+  c:\users\maosheng\source\repos\masterthesis\masterthesis\forest.cpp(62): note: see reference to function template instantiation 'Eigen::Matrix<int,-1,1,0,-1,1>::Matrix<Derived>(const Eigen::EigenBase<Derived> &)' being compiled
           with
           [
               Derived=Eigen::Matrix<float,-1,-1,0,-1,-1>
           ]
-  c:\users\maosheng\source\repos\masterthesis\masterthesis\forest.cpp(63): note: see reference to function template instantiation 'Eigen::Matrix<int,-1,1,0,-1,1>::Matrix<Derived>(const Eigen::EigenBase<Derived> &)' being compiled
+  c:\users\maosheng\source\repos\masterthesis\masterthesis\forest.cpp(62): note: see reference to function template instantiation 'Eigen::Matrix<int,-1,1,0,-1,1>::Matrix<Derived>(const Eigen::EigenBase<Derived> &)' being compiled
           with
           [
               Derived=Eigen::Matrix<float,-1,-1,0,-1,-1>
           ]
   main.cpp
 c:\users\maosheng\source\repos\masterthesis\masterthesis\main.cpp(39): warning C4305: 'initializing': truncation from 'double' to 'float'
+  FeatureFactory.cpp
+  Node.cpp
+c:\users\maosheng\source\repos\masterthesis\masterthesis\node.cpp(29): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  Sample.cpp
+c:\users\maosheng\source\repos\masterthesis\masterthesis\sample.cpp(13): error C2440: 'initializing': cannot convert from 'const Eigen::VectorXi' to 'Eigen::VectorXi &'
+  c:\users\maosheng\source\repos\masterthesis\masterthesis\sample.cpp(13): note: Conversion loses qualifiers
+c:\users\maosheng\source\repos\masterthesis\masterthesis\sample.cpp(13): error C2439: 'Sample::_labels': member could not be initialized
+  c:\users\maosheng\source\repos\masterthesis\masterthesis\sample.h(60): note: see declaration of 'Sample::_labels'
+c:\users\maosheng\source\repos\masterthesis\masterthesis\sample.cpp(13): error C2440: 'initializing': cannot convert from 'const Eigen::MatrixXf' to 'Eigen::MatrixXf &'
+  c:\users\maosheng\source\repos\masterthesis\masterthesis\sample.cpp(13): note: Conversion loses qualifiers
+c:\users\maosheng\source\repos\masterthesis\masterthesis\sample.cpp(13): error C2439: 'Sample::_dataset': member could not be initialized
+  c:\users\maosheng\source\repos\masterthesis\masterthesis\sample.h(61): note: see declaration of 'Sample::_dataset'
+  Tree.cpp
   Generating Code...

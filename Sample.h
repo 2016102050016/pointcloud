@@ -57,14 +57,14 @@ public:
 	inline int getNumFeatures() { return _numFeature; }
 	inline int getNeighborhoodSize() { return _indexMat.cols(); }
 
-	Eigen::VectorXi _labels;
-	Eigen::MatrixXf _dataset;
+	Eigen::VectorXi& _labels;
+	Eigen::MatrixXf& _dataset;
 
 private:
 
 	// _indexMat stores the indices of nearest neighbors for each datapoint
-	Eigen::MatrixXi _indexMat;
-	Eigen::MatrixXf _distMat;
+	Eigen::MatrixXi& _indexMat;
+	Eigen::MatrixXf& _distMat;
 
 	// stores the indices of selected datapoints
 	Eigen::VectorXi _selectedSamplesId;

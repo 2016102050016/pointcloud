@@ -26,7 +26,7 @@ public:
 
 	// split the node into two child nodes or set it as a leaf node
 	// based on the gini index of this node
-	void splitNodeByGini(std::vector<Node*> nodes, int nodeId, float threshGini);
+	void splitNodeByGini(std::vector<Node*>& nodes, int nodeId, float threshGini);
 	void computeNodeGini();
 	float computeGini(Eigen::VectorXi& labelVec);
 

@@ -170,7 +170,7 @@ void Node::computeNodeGini()
 
 
 // split the node into two children and compute the gini in each child node
-void Node::splitNodeByGini(std::vector<Node*> nodes, int nodeId, float threshGini)
+void Node::splitNodeByGini(std::vector<Node*> &nodes, int nodeId, float threshGini)
 {
 	Eigen::MatrixXf data = _samples->_dataset;
 	Eigen::VectorXi labels = _samples->_labels;
